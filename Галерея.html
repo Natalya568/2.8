@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<script src = "gal.js"></script>
+<html>
+    <head>
+        <script>
+
+             var k=1;
+
+            function showImg(n) {
+                document.getElementById("img1").style.borderColor = "black";
+                document.getElementById("img2").style.borderColor = "black";
+                document.getElementById("img3").style.borderColor = "black";
+                document.getElementById("img4").style.borderColor = "black";
+                document.getElementById("img5").style.borderColor = "black";
+            document.getElementById("bigimg").src="img"+n+".jpg";
+            document.getElementById("img"+n).style.borderColor = "red";
+            k=n;
+            console.log(k);
+            };
+                      
+           function changeImg() {
+                document.getElementById("img1").style.borderColor = "black";
+                document.getElementById("img2").style.borderColor = "black";
+                document.getElementById("img3").style.borderColor = "black";
+                document.getElementById("img4").style.borderColor = "black";
+                document.getElementById("img5").style.borderColor = "black";
+                document.getElementById("bigimg").src="img"+(k+1)+".jpg";
+                document.getElementById("img"+(k+1)).style.borderColor = "red";  
+                console.log(k);  
+                k!=4 ? k++ : k=0;                     
+            }
+
+      </script>
+
+<script src = "gal.js"></script>
+
+
+    </head>
+<center>
+    <body onload="showImg(1)">
+	
+        <img id="bigimg" src="img1.jpg" border="3px" width="30%" onclick="changeImg()"/><br>
+        <img src="img1.jpg" id="img1" border="3px" width="6%" onclick="showImg(1)"/>
+        <img src="img2.jpg" id="img2" border="3px" width="6%" onclick="showImg(2)"/>
+        <img src="img3.jpg" id="img3" border="3px" width="6%" onclick="showImg(3)"/>
+        <img src="img4.jpg" id="img4" border="3px" width="6%" onclick="showImg(4)"/>
+        <img src="img5.jpg" id="img5" border="3px" width="6%" onclick="showImg(5)"/>
+	<br>
+	<img src = "left_arrow.jpg" width = "40" height = "40" onClick = "left_arrow()" />
+	<img src = "right_arrow.jpg" width = "40" height = "40" onClick = "right_arrow()" />
+</center>
+</body>
+</html>
